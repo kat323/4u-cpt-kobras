@@ -3,10 +3,10 @@ package stateFolder;
 import java.awt.Graphics2D;
 
 public abstract class State {
-    public void init(){}
+    public abstract void init();
 
-    public void draw(){}
+    public abstract void draw(Graphics2D g);
 
-    public void update(){}
+    public abstract void update();
 
 }
