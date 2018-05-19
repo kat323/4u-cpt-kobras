@@ -23,4 +23,9 @@ public class DialogueState extends State {
     public void update() {
 
     }
+
+    @Override
+    public void handleInput() {
+
+    }
 }

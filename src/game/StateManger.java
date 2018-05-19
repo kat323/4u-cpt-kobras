@@ -20,6 +20,7 @@ public class StateManger {
 
     public void StateManager() {
         init();
+
     }
     public void init() {
         states = new State[NUM_STATES];

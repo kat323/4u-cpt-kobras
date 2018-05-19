@@ -23,4 +23,9 @@ public class LocationState extends State {
     public void update() {
 
     }
+
+    @Override
+    public void handleInput() {
+
+    }
 }

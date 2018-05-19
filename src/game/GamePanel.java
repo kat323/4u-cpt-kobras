@@ -3,10 +3,13 @@ package game;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
 
-public class GamePanel extends JPanel implements Runnable{
+public class GamePanel extends JPanel implements Runnable, MouseListener, MouseMotionListener {
     public static final int WIDTH = 800;
     public static final int HEIGHT = 800;
 
@@ -32,6 +35,11 @@ public class GamePanel extends JPanel implements Runnable{
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(this);
+        setFocusable(true);
+        requestFocus();
+        addMouseListener(this);
+        addMouseMotionListener(this);
+
 
         image = new BufferedImage(WIDTH, HEIGHT, 1);
         g = (Graphics2D) image.getGraphics();
@@ -66,9 +74,10 @@ public class GamePanel extends JPanel implements Runnable{
     }
 
     public void tick() {
-        sm.update();
-        draw();
-        drawToScreen();
+        System.out.println(Mouse.getX() + "" + Mouse.getY());
+        //sm.update();
+        //draw();
+        //drawToScreen();
     }
     public void draw() {
         sm.draw(g);
@@ -79,4 +88,32 @@ public class GamePanel extends JPanel implements Runnable{
         g2.dispose();
     }
 
+    @Override
+    public void mouseClicked(MouseEvent e) {}
+    @Override
+    public void mousePressed(MouseEvent e) {
+        Mouse.click(e.getX(),e.getY() ,true );
+    }
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        Mouse.click(e.getX(),e.getY() ,false );
+    }
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        Mouse.setX(e.getX());
+        Mouse.setY(e.getY());
+    }
+    @Override
+    public void mouseMoved(MouseEvent e) {
+
+    }
 }
