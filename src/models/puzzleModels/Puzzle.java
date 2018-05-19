@@ -1,4 +1,4 @@
-package puzzleModels;
+package models.puzzleModels;
 
 import java.awt.Graphics2D;
 

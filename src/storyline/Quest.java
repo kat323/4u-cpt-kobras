@@ -1,6 +1,6 @@
 package storyline;
 
-import puzzleModels.Puzzle;
+import models.puzzleModels.Puzzle;
 
 public class Quest {
     private Puzzle puzzle;
