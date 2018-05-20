@@ -4,6 +4,9 @@ import game.StateManager;
 
 import java.awt.Graphics2D;
 
+/**
+ * just a basic outline of the state class
+ */
 public abstract class State {
     protected StateManager sm;
 

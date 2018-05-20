@@ -8,7 +8,9 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
-
+/**
+ * this is the main frame which contains the game loop and the component that all the other classes draw on
+ */
 public class GamePanel extends JPanel implements Runnable, MouseListener, MouseMotionListener {
     public static final int WIDTH = 800;
     public static final int HEIGHT = 800;
@@ -27,6 +29,11 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         init();
     }
 
+    /**
+     * initializes the JFrame and adds the gamepanel as well as the eventlisteners that it implements
+     * Thread for the program also is initialized which runs the run method
+     *
+     */
     private void init() {
         JFrame frame = new JFrame("School Simulator");
         frame.setSize(WIDTH,HEIGHT);
@@ -50,6 +57,10 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         thread.start();
     }
 
+    /**
+     * Main game loop that updates at 30FPS
+     *
+     */
     public void run() {
         long start, elapsed, wait;
         while(running) {
@@ -72,15 +83,26 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         }
     }
 
+    /**
+     * Methods that are called that are updated constantly
+     */
     public void tick() {
-        //sm.update();
+        sm.update();
         draw();
         drawToScreen();
     }
+
+    /**
+     * calls the statemanager to draw using the given Graphics2D
+     */
     public void draw() {
 
          sm.draw(g);
     }
+
+    /**
+     * Buffers the image to display
+     */
     private void drawToScreen() {
         Graphics g2 = getGraphics();
         g2.drawImage(image, 0, 0, WIDTH , HEIGHT , null);
@@ -88,6 +110,10 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         g2.dispose();
     }
 
+
+    /**
+     * methods that are implented from MouseListener and MouseMotionListener
+     */
     @Override
     public void mouseClicked(MouseEvent e) {}
     @Override
@@ -114,6 +140,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     }
     @Override
     public void mouseMoved(MouseEvent e) {
-
+        Mouse.setX(e.getX());
+        Mouse.setY(e.getY());
     }
 }

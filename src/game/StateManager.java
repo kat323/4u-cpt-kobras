@@ -2,11 +2,12 @@ package game;
 
 import stateFolder.*;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 
+/**
+ * class that handles what event happens
+ * It differentiates them by states
+ */
 public class StateManager {
     private static State[] states;
     private int currState;
@@ -19,14 +20,20 @@ public class StateManager {
     public static final int MAP = 5;
     public static final int NUM_STATES = 6;
 
-
+    /**
+     * when game is started
+     */
     public StateManager() {
         states = new State[NUM_STATES];
         currState = 0;
         setState(INTRO);
     }
 
-
+    /**
+     * initializes the state to an array of states
+     * @param a
+     *          the int of the index in the array of states
+     */
     public void setState(int a) {
         prevState = currState;
         destroy(prevState);
@@ -52,10 +59,20 @@ public class StateManager {
             states[a].init();
         }
     }
+
+    /**
+     * sets the states to null
+     * clears some data
+     * @param a
+     */
     public void destroy(int a) {
         states[a] = null;
     }
 
+    /**
+     * constantly draws the current state
+     * @param g
+     */
     public void draw(Graphics2D g) {
 
         if(states[currState] != null) {
@@ -65,6 +82,10 @@ public class StateManager {
 
     }
 
+    /**
+     * calls the update methods of the state to change the state
+     * it is called 30X per second
+     */
     public void update() {
         if(states[currState] != null) {
             states[currState].update();
