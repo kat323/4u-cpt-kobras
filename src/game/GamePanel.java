@@ -13,7 +13,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     public static final int WIDTH = 800;
     public static final int HEIGHT = 800;
     public JPanel pane;
-    private StateManger sm;
+    private StateManager sm;
 
     private BufferedImage image;
     private Graphics2D g;
@@ -43,7 +43,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         image = new BufferedImage(WIDTH, HEIGHT, 1);
         g = (Graphics2D) image.getGraphics();
 
-        sm = new StateManger();
+        sm = new StateManager();
 
         running = true;
         thread = new Thread(this);
@@ -73,7 +73,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     }
 
     public void tick() {
-        sm.update();
+        //sm.update();
         draw();
         drawToScreen();
     }

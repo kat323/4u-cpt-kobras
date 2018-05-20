@@ -1,11 +1,11 @@
 package stateFolder;
 
-import game.StateManger;
+import game.StateManager;
 
 import java.awt.*;
 
 public class LocationState extends State {
-    public LocationState(StateManger sm) {
+    public LocationState(StateManager sm) {
         super(sm);
     }
 

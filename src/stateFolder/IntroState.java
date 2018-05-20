@@ -1,23 +1,33 @@
 package stateFolder;
 
-import game.GamePanel;
-import game.StateManger;
 
+import game.StateManager;
+
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class IntroState extends State {
-    public IntroState(StateManger sm) {
+    public IntroState(StateManager sm) {
         super(sm);
     }
+
+
+
 
     @Override
     public void init() {
 
     }
-
+    BufferedImage image;
     @Override
     public void draw(Graphics2D g) {
-        g.drawRect(300, 300, 100, 100);
+        try {
+            image  =ImageIO.read(this.getClass().getResource("/images/imageTest.png"));
+        }catch(Exception e) {
+
+        }
+        g.drawImage(image,0 ,0 ,800,800, null );
     }
 
     @Override

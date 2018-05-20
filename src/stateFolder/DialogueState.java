@@ -1,11 +1,11 @@
 package stateFolder;
 
-import game.StateManger;
+import game.StateManager;
 
 import java.awt.*;
 
 public class DialogueState extends State {
-    public DialogueState(StateManger sm) {
+    public DialogueState(StateManager sm) {
         super(sm);
     }
 

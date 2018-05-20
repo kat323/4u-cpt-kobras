@@ -2,10 +2,12 @@ package game;
 
 import stateFolder.*;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-public class StateManger {
+public class StateManager {
     private static State[] states;
     private int currState;
     private int prevState;
@@ -18,17 +20,15 @@ public class StateManger {
     public static final int NUM_STATES = 6;
 
 
-    public void StateManager() {
-        init();
-
-    }
-    public void init() {
+    public StateManager() {
         states = new State[NUM_STATES];
+        currState = 0;
         setState(INTRO);
     }
 
+
     public void setState(int a) {
-        prevState= currState;
+        prevState = currState;
         destroy(prevState);
         currState = a;
 
@@ -57,11 +57,18 @@ public class StateManger {
     }
 
     public void draw(Graphics2D g) {
-        states[currState].draw(g);
+
+        if(states[currState] != null) {
+            states[currState].draw(g);
+        }
+
+
     }
 
     public void update() {
-        states[currState].update();
+        if(states[currState] != null) {
+            states[currState].update();
+        }
     }
 
 }

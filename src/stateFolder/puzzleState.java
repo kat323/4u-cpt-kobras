@@ -1,11 +1,11 @@
 package stateFolder;
 
-import game.StateManger;
+import game.StateManager;
 
 import java.awt.*;
 
 public class puzzleState extends State{
-    public puzzleState(StateManger sm) {
+    public puzzleState(StateManager sm) {
         super(sm);
     }
 

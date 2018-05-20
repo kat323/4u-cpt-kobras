@@ -1,11 +1,11 @@
 package stateFolder;
 
-import game.StateManger;
+import game.StateManager;
 
 import java.awt.*;
 
 public class MenuState extends State {
-    public MenuState(StateManger sm) {
+    public MenuState(StateManager sm) {
         super(sm);
     }
 

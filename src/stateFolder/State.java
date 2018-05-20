@@ -1,13 +1,13 @@
 package stateFolder;
 
-import game.StateManger;
+import game.StateManager;
 
 import java.awt.Graphics2D;
 
 public abstract class State {
-    protected StateManger sm;
+    protected StateManager sm;
 
-    public State(StateManger sm) {
+    public State(StateManager sm) {
         this.sm = sm;
     }
 
