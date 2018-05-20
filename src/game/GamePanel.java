@@ -1,6 +1,8 @@
 package game;
 
 
+import javafx.scene.layout.Pane;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -14,7 +16,6 @@ import java.awt.image.BufferedImage;
 public class GamePanel extends JPanel implements Runnable, MouseListener, MouseMotionListener {
     public static final int WIDTH = 800;
     public static final int HEIGHT = 800;
-    public JPanel pane;
     private StateManager sm;
 
     private BufferedImage image;
@@ -46,6 +47,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         requestFocus();
         addMouseListener(this);
         addMouseMotionListener(this);
+
 
         image = new BufferedImage(WIDTH, HEIGHT, 1);
         g = (Graphics2D) image.getGraphics();
@@ -109,6 +111,9 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
 
         g2.dispose();
     }
+    public void addComp(JComponent j) {
+        add(j);
+    }
 
 
     /**
@@ -145,3 +150,4 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         Mouse.setY(e.getY());
     }
 }
+

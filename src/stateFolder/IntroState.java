@@ -1,12 +1,16 @@
 package stateFolder;
 
 
+import game.GamePanel;
+import game.Main;
 import game.Mouse;
 import game.StateManager;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.nio.Buffer;
 
 /**
  * the welcome screen of the game
@@ -25,13 +29,14 @@ public class IntroState extends State {
 
     @Override
     public void init() {
-
     }
     BufferedImage image;
+
     @Override
     public void draw(Graphics2D g) {
         try {
             image  =ImageIO.read(this.getClass().getResource("/images/imageTest.png"));
+
         }catch(Exception e) {
 
         }
@@ -47,7 +52,6 @@ public class IntroState extends State {
 
     @Override
     public void handleInput() {
-        System.out.println(Mouse.getX() + " " + Mouse.getY() + " " + Mouse.isClicked());
         if(Mouse.isClicked() && Mouse.isCollided(300,300,300,150))
             sm.setState(sm.LOCATION);
     }

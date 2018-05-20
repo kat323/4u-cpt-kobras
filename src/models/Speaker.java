@@ -4,8 +4,8 @@ import java.awt.image.BufferedImage;
 
 public class Speaker {
     private String text;
-    private BufferedImage image;
-    public Speaker(String text, BufferedImage image) {
+    private int image;
+    public Speaker(String text, int image) {
         this.text = text;
         this.image = image;
     }
@@ -14,7 +14,7 @@ public class Speaker {
         return text;
     }
 
-    public BufferedImage getImage() {
+    public int getImage() {
         return image;
     }
 }

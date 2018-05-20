@@ -1,12 +1,16 @@
 package models;
 
-import java.awt.*;
-
 public class Location {
     private int index;
     private int[] roomLocations;
-    private Image backGround;
+    private int background;
+    private int[] entities;
 
+    public Location(int index,int[] roomLocations,int background, int[] entities) {
+        this.background = background;
+        this.entities = entities;
+
+    }
     public int getIndex() {
         return index;
     }
@@ -23,11 +27,11 @@ public class Location {
         this.roomLocations = roomLocations;
     }
 
-    public Image getBackGround() {
-        return backGround;
+    public int getBackground() {
+        return background;
     }
 
-    public void setBackGround(Image backGround) {
-        this.backGround = backGround;
+    public void setBackground(int background) {
+        this.background = background;
     }
 }
