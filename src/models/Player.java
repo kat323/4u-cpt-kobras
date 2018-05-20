@@ -47,7 +47,7 @@ public class Player {
         int marks = 0;
         try {
             for (int i = 0; i < 4; i++) {
-                for (int j = coursesTaken[i].size(); j++) {
+                for (int j = 0;j < coursesTaken[i].size(); j++) {
                     marks += coursesTaken[i].get(j).getScore();
                     total += coursesTaken[i].get(j).getTotal();
                 }
