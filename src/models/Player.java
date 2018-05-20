@@ -2,9 +2,13 @@ package models;
 
 import models.puzzleModels.Puzzle;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Player {
+/**
+ * class that stores user information
+ */
+public class Player implements Serializable {
     private int grade;
     private int location;
     private double[] average;
@@ -42,6 +46,9 @@ public class Player {
         return average[grade];
     }
 
+    /**
+     * sets all the averages
+     */
     public void setAverage() {
         int total = 0;
         int marks = 0;
@@ -64,7 +71,7 @@ public class Player {
         return credits;
     }
 
-    public void setCredits(int add) {
-        credits += add;
+    public void increaseCredit() {
+        credits++;
     }
 }
