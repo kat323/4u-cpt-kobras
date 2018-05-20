@@ -12,7 +12,7 @@ import java.awt.image.BufferedImage;
 public class GamePanel extends JPanel implements Runnable, MouseListener, MouseMotionListener {
     public static final int WIDTH = 800;
     public static final int HEIGHT = 800;
-
+    public JPanel pane;
     private StateManger sm;
 
     private BufferedImage image;
@@ -39,7 +39,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         requestFocus();
         addMouseListener(this);
         addMouseMotionListener(this);
-
 
         image = new BufferedImage(WIDTH, HEIGHT, 1);
         g = (Graphics2D) image.getGraphics();
@@ -74,17 +73,18 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     }
 
     public void tick() {
-        System.out.println(Mouse.getX() + "" + Mouse.getY());
-        //sm.update();
-        //draw();
-        //drawToScreen();
+        sm.update();
+        draw();
+        drawToScreen();
     }
     public void draw() {
-        sm.draw(g);
+
+         sm.draw(g);
     }
     private void drawToScreen() {
         Graphics g2 = getGraphics();
         g2.drawImage(image, 0, 0, WIDTH , HEIGHT , null);
+
         g2.dispose();
     }
 

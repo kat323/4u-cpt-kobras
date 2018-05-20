@@ -60,4 +60,8 @@ public class StateManger {
         states[currState].draw(g);
     }
 
+    public void update() {
+        states[currState].update();
+    }
+
 }
