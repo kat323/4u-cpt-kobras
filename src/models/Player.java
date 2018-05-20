@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Player implements Serializable {
     private int grade;
-    private int location;
+    private static int location;
     private double[] average;
     private int credits;
     private ArrayList<Puzzle>[] coursesTaken = new ArrayList[4];
@@ -33,12 +33,12 @@ public class Player implements Serializable {
         this.grade = grade;
     }
 
-    public int getLocation() {
+    public static int getLocation() {
         return location;
     }
 
-    public void setLocation(int location) {
-        this.location = location;
+    public static void setLocation(int move) {
+        location = move;
     }
 
     public double getAverage(int grade) {

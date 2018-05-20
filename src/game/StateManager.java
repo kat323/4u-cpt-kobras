@@ -18,7 +18,8 @@ public class StateManager {
     public static final int DIALOGUE = 3;
     public static final int LOCATION = 4;
     public static final int MAP = 5;
-    public static final int NUM_STATES = 6;
+    public static final int DECISION = 6;
+    public static final int NUM_STATES = 7;
 
     /**
      * when game is started
@@ -56,6 +57,9 @@ public class StateManager {
             states[a].init();
         }else if(a == MAP) {
             states[a] = new MapState(this);
+            states[a].init();
+        }else if(a == DECISION) {
+            states[a] = new DecisionState(this);
             states[a].init();
         }
     }

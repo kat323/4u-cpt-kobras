@@ -4,11 +4,9 @@ import game.StateManager;
 
 import java.awt.*;
 
-/**
- * displays the
- */
-public class LocationState extends State {
-    public LocationState(StateManager sm) {
+public class DecisionState extends State {
+
+    public DecisionState(StateManager sm) {
         super(sm);
     }
 
