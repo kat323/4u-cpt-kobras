@@ -137,6 +137,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     public void mouseDragged(MouseEvent e) {
         Mouse.setX(e.getX());
         Mouse.setY(e.getY());
+        Mouse.setClickState(false);
     }
     @Override
     public void mouseMoved(MouseEvent e) {

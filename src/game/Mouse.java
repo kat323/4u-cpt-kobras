@@ -62,6 +62,11 @@ public class Mouse  {
     }
 
     public static boolean isCollided(int x, int y, int width, int height) {
-        return TODO;
+        if(Mouse.x <= x + width && Mouse.x>=x) {
+            if(Mouse.y <= y + height && Mouse.y >= y) {
+                return true;
+            }
+        }
+        return false;
     }
 }
