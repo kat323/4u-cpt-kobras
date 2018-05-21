@@ -16,16 +16,18 @@ public class MenuState extends State {
 
     @Override
     public void draw(Graphics2D g) {
-
+        // draw bg and menu buttons NO JCOMPONENTS
+        //
     }
 
     @Override
     public void update() {
-
+        handleInput();
     }
 
     @Override
     public void handleInput() {
-
+        // if clicked on certain buttons
+        // then perform that task
     }
 }

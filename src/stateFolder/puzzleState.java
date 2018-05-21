@@ -5,7 +5,7 @@ import game.StateManager;
 import java.awt.*;
 
 public class puzzleState extends State{
-    public puzzleState(StateManager sm) {
+    public puzzleState(StateManager sm, int id) {
         super(sm);
     }
 

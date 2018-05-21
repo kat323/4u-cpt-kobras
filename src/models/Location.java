@@ -4,11 +4,15 @@ public class Location {
     private int index;
     private int[] roomLocations;
     private int background;
-    private int[] entities;
+    private int[] roomObjects;
+    private int[][] objXY;
 
-    public Location(int index,int[] roomLocations,int background, int[] entities) {
+    public Location(int index,int[] roomLocations,int background, int[] roomObjects, int[][] objXY) {
+        this.index = index;
+        this.roomLocations = roomLocations;
         this.background = background;
-        this.entities = entities;
+        this.roomObjects = roomObjects;
+        this.objXY = objXY;
 
     }
     public int getIndex() {
@@ -33,5 +37,13 @@ public class Location {
 
     public void setBackground(int background) {
         this.background = background;
+    }
+
+    public int[] getRoomObjects() {
+        return roomObjects;
+    }
+
+    public int[][] getObjXY() {
+        return objXY;
     }
 }

@@ -36,7 +36,7 @@ public class LocationState extends State {
 
         // draw west
 
-        // draw entity
+        // draw room object at specified objxy
     }
 
     @Override
@@ -46,7 +46,6 @@ public class LocationState extends State {
 
     @Override
     public void handleInput() {
-        // if mouse collides with entity spot start dialogue
 
         // if mouse collides with north or
 
@@ -55,5 +54,8 @@ public class LocationState extends State {
         // if mouse collides with south or
 
         // if mouse collides with west or
+
+        // if mouse collides with entity spot start dialogue
+
     }
 }

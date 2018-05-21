@@ -3,7 +3,11 @@ package models;
 import static stateFolder.DecisionState.*;
 
 public class Decision {
-
+    public static final int PUZZLE = 1;
+    public static final int DIALOGUE = 2;
+    public static final int GRADE = 3;
+    public static final int MARK = 4;
+    public static final int SOCIAL = 5;
 
     private int ID;
     private String[] choices;
@@ -54,8 +58,9 @@ public class Decision {
     public Decision(int ID, String[] choices, int[] effects, int[] dialogues, int puzzle ) {
         this.ID = ID;
         this.choices = choices;
-        this.dialogue = dialogue;
+        this.dialogue = dialogues;
         this.puzzle = puzzle;
+        this.effects = effects;
     }
 
     public int choose(int index) {
