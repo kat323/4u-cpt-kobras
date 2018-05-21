@@ -1,6 +1,6 @@
 package game;
 
-import stateFolder.*;
+import states.*;
 
 import java.awt.*;
 

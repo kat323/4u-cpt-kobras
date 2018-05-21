@@ -8,6 +8,7 @@ public class Mouse  {
     private static int x;
     private static int y;
     private static boolean clickState;
+    private static boolean isDragged;
 
     /**
      *
@@ -68,5 +69,13 @@ public class Mouse  {
             }
         }
         return false;
+    }
+
+    public static boolean isDragged() {
+        return isDragged;
+    }
+
+    public static void setDragged(boolean isDragged) {
+        Mouse.isDragged = isDragged;
     }
 }

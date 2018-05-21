@@ -1,23 +1,24 @@
-package stateFolder;
+package states;
 
 import game.StateManager;
+import models.Speaker;
 
 import java.awt.*;
 
-public class DecisionState extends State {
+public class DialogueState extends State {
+    private int id;
+    private Speaker[] speakers;
 
-
-    public DecisionState(StateManager sm, int id) {
+    public DialogueState(StateManager sm, int id) {
         super(sm);
+        this.id = id;
     }
 
     @Override
     public void init() {
-        // get decision from,
+        // set speakers = to Content.getDialogue(id).getSpeakers()
     }
-    public static void setDecision(int decision) {
 
-    }
     @Override
     public void draw(Graphics2D g) {
 

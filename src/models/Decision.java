@@ -1,7 +1,5 @@
 package models;
 
-import static stateFolder.DecisionState.*;
-
 public class Decision {
     public static final int PUZZLE = 1;
     public static final int DIALOGUE = 2;

@@ -1,12 +1,10 @@
-package stateFolder;
+package states;
 
 import game.Content;
 import game.Mouse;
 import game.StateManager;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 /**
  * the welcome screen of the game
