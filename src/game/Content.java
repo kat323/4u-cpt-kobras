@@ -8,8 +8,7 @@ import javax.annotation.Resource;
 import javax.annotation.Resources;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -27,11 +26,18 @@ public class Content {
     public static void init() {
         initPuzzles();
         initDialogues();
-        // initImages(); cant be non static
+        initImages();
         initLocations();
     }
+
+
     public static void initPuzzles() {
-        Scanner sc = new Scanner("puzzles.txt");
+        Scanner sc = null;
+        try {
+            sc = new Scanner(new FileReader("resources/gamedat/puzzles.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
         sc.useDelimiter("///");
         while(!sc.hasNext()) {
             // read data into chunks
@@ -42,13 +48,27 @@ public class Content {
 
     }
 
+    /**
+     * a method that initializes images to be used in the game
+     */
     public static void initImages() {
-        
+        Scanner sc = null;
         try {
-            images.put(1, ImageIO.read(Content.class.getResource("/images/imageTest.png")));
-        } catch (IOException e) {
+            sc = new Scanner(new FileReader("resources/images/imageList.txt"));
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        int i = 1;
+        while(sc.hasNextLine()) {
+            String s = sc.nextLine();
+            try {
+                images.put(i, ImageIO.read(Content.class.getResource(s)));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            i++;
+        }
+
 
     }
 

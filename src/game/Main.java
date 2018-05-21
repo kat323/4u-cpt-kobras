@@ -9,7 +9,7 @@ import javax.swing.*;
  */
 public class Main {
     public static void main(String[] args) {
-        Content.initImages();
+        Content.init();
         new GamePanel();
     }
 
