@@ -17,7 +17,8 @@ public class MenuState extends State {
     @Override
     public void draw(Graphics2D g) {
         // draw bg and menu buttons NO JCOMPONENTS
-        //
+        // will have char stats in it
+
     }
 
     @Override
