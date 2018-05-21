@@ -1,4 +1,4 @@
-package stateFolder;
+package states;
 
 import game.StateManager;
 

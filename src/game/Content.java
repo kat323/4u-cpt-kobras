@@ -1,5 +1,6 @@
 package game;
 
+import models.Decision;
 import models.Dialogue;
 import models.Location;
 import models.puzzleModels.Puzzle;
@@ -15,16 +16,18 @@ import java.util.Scanner;
  */
 public class Content {
 
-    public static HashMap<Integer,Dialogue> dialogues = new HashMap<>();
+    public static HashMap<Integer, Dialogue> dialogues = new HashMap<>();
     public static HashMap<Integer, Puzzle> puzzles = new HashMap<>();
     public static HashMap<Integer, BufferedImage> images = new HashMap<>();
     public static HashMap<Integer, Location> locations = new HashMap<>();
+    public static HashMap<Integer, Decision> decisions = new HashMap<>();
 
     public static void init() {
         initPuzzles();
         initDialogues();
         initImages();
         initLocations();
+        initDecisions();
     }
 
 
@@ -71,6 +74,10 @@ public class Content {
     }
 
     public static void initLocations() {
+
+    }
+
+    public static void initDecisions() {
 
     }
 
