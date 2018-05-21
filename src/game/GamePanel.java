@@ -1,8 +1,5 @@
 package game;
 
-
-import javafx.scene.layout.Pane;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -110,9 +107,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         g2.drawImage(image, 0, 0, WIDTH , HEIGHT , null);
 
         g2.dispose();
-    }
-    public void addComp(JComponent j) {
-        add(j);
     }
 
 
