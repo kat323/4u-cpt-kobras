@@ -3,9 +3,6 @@ package game;
 import models.Dialogue;
 import models.Location;
 import models.puzzleModels.Puzzle;
-
-import javax.annotation.Resource;
-import javax.annotation.Resources;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -39,8 +36,9 @@ public class Content {
             e.printStackTrace();
         }
         sc.useDelimiter("///");
-        while(!sc.hasNext()) {
+        while(sc.hasNext()) {
             // read data into chunks
+            // create classes into the
         }
     }
 

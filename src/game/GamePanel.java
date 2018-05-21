@@ -127,6 +127,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     }
     @Override
     public void mouseReleased(MouseEvent e) {
+        Mouse.setDragged(false);
         Mouse.click(e.getX(),e.getY() ,false );
     }
     @Override
@@ -142,6 +143,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     public void mouseDragged(MouseEvent e) {
         Mouse.setX(e.getX());
         Mouse.setY(e.getY());
+        Mouse.setDragged(true);
         Mouse.setClickState(false);
     }
     @Override
