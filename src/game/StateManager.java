@@ -27,40 +27,40 @@ public class StateManager {
     public StateManager() {
         states = new State[NUM_STATES];
         currState = 0;
-        setState(INTRO);
+        setState(INTRO, 0);
     }
 
     /**
      * initializes the state to an array of states
-     * @param a
+     * @param state
      *          the int of the index in the array of states
      */
-    public void setState(int a) {
+    public void setState(int state, int id) {
         prevState = currState;
         destroy(prevState);
-        currState = a;
+        currState = state;
 
-        if(a == INTRO) {
-            states[a] = new IntroState(this);
-            states[a].init();
-        } else if(a == MENU) {
-            states[a] = new MenuState(this);
-            states[a].init();
-        }else if(a == PUZZLE) {
-            states[a] = new puzzleState(this);
-            states[a].init();
-        }else if(a == DIALOGUE) {
-            states[a] = new DialogueState(this);
-            states[a].init();
-        }else if(a == LOCATION) {
-            states[a] = new LocationState(this);
-            states[a].init();
-        }else if(a == MAP) {
-            states[a] = new MapState(this);
-            states[a].init();
-        }else if(a == DECISION) {
-            states[a] = new DecisionState(this);
-            states[a].init();
+        if(state == INTRO) {
+            states[state] = new IntroState(this);
+            states[state].init();
+        } else if(state == MENU) {
+            states[state] = new MenuState(this);
+            states[state].init();
+        }else if(state == PUZZLE) {
+            states[state] = new puzzleState(this, id);
+            states[state].init();
+        }else if(state == DIALOGUE) {
+            states[state] = new DialogueState(this, id);
+            states[state].init();
+        }else if(state == LOCATION) {
+            states[state] = new LocationState(this);
+            states[state].init();
+        }else if(state == MAP) {
+            states[state] = new MapState(this);
+            states[state].init();
+        }else if(state == DECISION) {
+            states[state] = new DecisionState(this, id);
+            states[state].init();
         }
     }
 

@@ -1,7 +1,5 @@
 package models;
 
-import java.awt.image.BufferedImage;
-
 public class Speaker {
     private String text;
     private int image;

@@ -1,17 +1,22 @@
 package stateFolder;
 
 import game.StateManager;
+import models.Speaker;
 
 import java.awt.*;
 
 public class DialogueState extends State {
-    public DialogueState(StateManager sm) {
+    private int id;
+    private Speaker[] speakers;
+
+    public DialogueState(StateManager sm, int id) {
         super(sm);
+        this.id = id;
     }
 
     @Override
     public void init() {
-
+        // set speakers = to Content.getDialogue(id).getSpeakers()
     }
 
     @Override
