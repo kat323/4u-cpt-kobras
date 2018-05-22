@@ -1,49 +1,34 @@
 package models;
 
+import helpers.Content;
+
 public class Location {
     private int index;
     private int[] roomLocations;
-    private int background;
-    private roomObj[] roomObjects;
-    private int[][] objXY;
+    private ImgObj background;
+    private ImgObj[] imgObjects;
 
-    public Location(int index,int[] roomLocations,int background, roomObj[] roomObjects, int[][] objXY) {
+    public Location(int index, int[] roomLocations, int background, ImgObj[] imgObjects) {
         this.index = index;
         this.roomLocations = roomLocations;
-        this.background = background;
-        this.roomObjects = roomObjects;
-        this.objXY = objXY;
+        this.background = Content.images.get(background);
+        this.imgObjects = imgObjects;
 
     }
     public int getIndex() {
         return index;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
     public int[] getRoomLocations() {
         return roomLocations;
     }
 
-    public void setRoomLocations(int[] roomLocations) {
-        this.roomLocations = roomLocations;
-    }
-
-    public int getBackground() {
+    public ImgObj getBackground() {
         return background;
     }
 
-    public void setBackground(int background) {
-        this.background = background;
+    public ImgObj[] getImgObjects() {
+        return imgObjects;
     }
 
-    public roomObj[] getRoomObjects() {
-        return roomObjects;
-    }
-
-    public int[][] getObjXY() {
-        return objXY;
-    }
 }

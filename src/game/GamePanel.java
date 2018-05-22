@@ -1,5 +1,7 @@
 package game;
 
+import helpers.Mouse;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
