@@ -7,18 +7,18 @@ public class Decision {
     public static final int MARK = 4;
     public static final int SOCIAL = 5;
 
-    private int ID;
+    private int id;
     private String[] choices;
     private int[] effects;
     private int[] dialogue;
     private int puzzle;
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String[] getChoices() {
@@ -53,8 +53,8 @@ public class Decision {
         this.puzzle = puzzle;
     }
 
-    public Decision(int ID, String[] choices, int[] effects, int[] dialogues, int puzzle ) {
-        this.ID = ID;
+    public Decision(int id, String[] choices, int[] effects, int[] dialogues, int puzzle ) {
+        this.id = id;
         this.choices = choices;
         this.dialogue = dialogues;
         this.puzzle = puzzle;

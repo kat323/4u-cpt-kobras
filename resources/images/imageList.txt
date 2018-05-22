@@ -1,9 +1,6 @@
-0 0 800 800 /images/imageTest.png
-375 715 50 50 /images/locationImg/arrowDown.png
-375 0 50 50 /images/locationImg/arrowUp.png
-0 375 50 50 /images/locationImg/arrowLeft.png
-750 375 50 50 /images/locationImg/arrowRight.png
-0 0 800 800 /images/locationImg/0.png
-0 0 800 800 /images/locationImg/1.png
-0 0 800 800 /images/locationImg/2.png
-0 0 800 800 /images/locationImg/3.png
+0 0 0 800 800 /images/imageTest.png
+1 375 715 50 50 /images/locationImg/arrowDown.png
+2 375 0 50 50 /images/locationImg/arrowUp.png
+3 0 375 50 50 /images/locationImg/arrowLeft.png
+4 750 375 50 50 /images/locationImg/arrowRight.png
+5 300 250 400 100 /images/startBtn.png

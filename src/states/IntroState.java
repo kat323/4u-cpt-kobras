@@ -12,7 +12,7 @@ import java.awt.*;
  * the welcome screen of the game
  */
 public class IntroState extends State {
-    private ImgObj startBtn = Content.images.get(0);
+    private ImgObj startBtn = Content.images.get(5);
 
     public IntroState(StateManager sm) {
         super(sm);

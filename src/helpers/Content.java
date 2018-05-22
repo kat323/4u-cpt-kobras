@@ -66,13 +66,14 @@ public class Content {
             String s = sc.nextLine();
             Scanner imgSc = new Scanner(s);
             try {
+                int id = Integer.parseInt(imgSc.next());
                 int x = Integer.parseInt(imgSc.next());
                 int y = Integer.parseInt(imgSc.next());
                 int width = Integer.parseInt(imgSc.next());
                 int height = Integer.parseInt(imgSc.next());
                 BufferedImage img = ImageIO.read(Content.class.getResource(imgSc.next()));
 
-                images.put(i, new ImgObj(x, y, height, width, img) );
+                images.put(id, new ImgObj(id ,x, y, width, height, img) );
             } catch (IOException e) {
                 e.printStackTrace();
             }

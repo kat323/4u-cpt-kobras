@@ -9,6 +9,9 @@ https://drive.google.com/file/d/1XImkd3lKZEuy_Xqwi0SWBkSPfnRyidDI/view?usp=shari
 
 
 THINGS TO KNOW
+locations.txt format: id roomNorth roomEast roomSouth roomWest bgImgName dialogue1 dialogue2 dialogue3 dialogue4
+
+imgList.txt format: id xpos ypos width height imgName
 
 sm.setState is called to change states only in the state classes
 
