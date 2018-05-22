@@ -12,7 +12,7 @@ THINGS TO KNOW
 
 sm.setState is called to change states only in the state classes
 
-State is basically a controller 
+State is basically a controller
 
 statically call on the mouse class to check different mouse inputs
 
