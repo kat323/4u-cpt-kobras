@@ -1,6 +1,9 @@
 package states;
 
 import game.StateManager;
+import helpers.Content;
+import helpers.Drawer;
+import models.ImgObj;
 
 import java.awt.*;
 
@@ -9,6 +12,12 @@ import java.awt.*;
  * Allows the user to click on arrows to move, or interact with surroundings
  */
 public class LocationState extends State {
+    private static ImgObj[] arrows = {Content.images.get(1),Content.images.get(2), Content.images.get(3), Content.images.get(4)};
+    private static int UP = 0;
+    private static int RIGHT = 1;
+    private static int DOWN = 2;
+    private static int LEFT = 3;
+
     private int[] directions;
 
 
@@ -27,15 +36,9 @@ public class LocationState extends State {
     @Override
     public void draw(Graphics2D g) {
         // draw background
-
-        // draw north
-
-        // draw east
-
-        // draw south
-
-        // draw west
-
+        for(ImgObj a: arrows) {
+            Drawer.draw(g,a);
+        }
         // draw room object at specified objxy
     }
 

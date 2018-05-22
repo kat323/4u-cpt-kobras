@@ -12,7 +12,7 @@ import java.awt.*;
  * the welcome screen of the game
  */
 public class IntroState extends State {
-    private ImgObj startBtn = Content.images.get(1);
+    private ImgObj startBtn = Content.images.get(0);
 
     public IntroState(StateManager sm) {
         super(sm);
@@ -29,7 +29,8 @@ public class IntroState extends State {
     public void draw(Graphics2D g) {
 
         g.drawImage(Content.images.get(0).img,0 ,0 ,800,800, null );
-        Drawer.draw(g,startBtn );
+
+        Drawer.draw(g,startBtn);
 
     }
 

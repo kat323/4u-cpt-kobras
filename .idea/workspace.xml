@@ -2,23 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048aea2d-944e-40ee-99d1-0285c1299e91" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/arrowDown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/arrowLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/arrowRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/arrowUp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/Drawer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/locationImg/3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/images/imageList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/images/imageList.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Mouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Dialogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Speaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Speaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/roomObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ImgObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Drawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Mouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/states/IntroState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/IntroState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/states/LocationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/LocationState.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imageList.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="imageList.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/images/imageList.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -51,7 +44,7 @@
       <file leaf-file-name="Content.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/helpers/Content.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
+            <state relative-caret-position="1579">
               <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/helpers/Drawer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,17 +68,17 @@
       <file leaf-file-name="IntroState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/states/IntroState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+            <state relative-caret-position="283">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mouse.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Mouse.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/helpers/Mouse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="175">
+              <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -99,11 +92,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Decision.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/Decision.java">
+      <file leaf-file-name="LocationState.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/states/LocationState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="58" column="34" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+            <state relative-caret-position="424">
+              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#351#352#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,18 +175,20 @@
         <option value="$PROJECT_DIR$/src/game/Content.java" />
         <option value="$PROJECT_DIR$/src/helpers/GraphicKo.java" />
         <option value="$PROJECT_DIR$/src/helpers/Content.java" />
-        <option value="$PROJECT_DIR$/src/helpers/Drawer.java" />
         <option value="$PROJECT_DIR$/src/models/ImgObj.java" />
         <option value="$PROJECT_DIR$/src/states/IntroState.java" />
+        <option value="$PROJECT_DIR$/src/states/LocationState.java" />
         <option value="$PROJECT_DIR$/resources/images/imageList.txt" />
+        <option value="$PROJECT_DIR$/src/helpers/Drawer.java" />
+        <option value="$PROJECT_DIR$/src/helpers/Mouse.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="355" />
-    <option name="y" value="24" />
-    <option name="width" value="652" />
-    <option name="height" value="275" />
+    <option name="x" value="444" />
+    <option name="y" value="31" />
+    <option name="width" value="815" />
+    <option name="height" value="343" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,12 +212,6 @@
               <item name="school project" type="b2602c69:ProjectViewProjectNode" />
               <item name="school project" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="gamedat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="school project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="school project" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,6 +225,37 @@
               <item name="school project" type="b2602c69:ProjectViewProjectNode" />
               <item name="school project" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="school project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="school project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="school project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="school project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="storyline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="school project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="school project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="states" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -495,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527017208438</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="added working Drawer class">
+      <created>1527021457992</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1527021457992</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -557,7 +589,8 @@
     <MESSAGE value="added quest and storyline class" />
     <MESSAGE value="added decision to resources" />
     <MESSAGE value="added roomObj" />
-    <option name="LAST_COMMIT_MESSAGE" value="added roomObj" />
+    <MESSAGE value="added working Drawer class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added working Drawer class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -779,16 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/LocationState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/states/MapState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -876,23 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/Mouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/Drawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/ImgObj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
@@ -907,16 +913,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/states/IntroState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/helpers/Content.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
+        <state relative-caret-position="1579">
           <caret line="70" column="59" selection-start-line="70" selection-start-column="59" selection-end-line="70" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -924,10 +923,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/IntroState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/states/LocationState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/images/imageList.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/Drawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/Mouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
         </state>
       </provider>
     </entry>
