@@ -13,10 +13,10 @@ import java.awt.*;
  */
 public class LocationState extends State {
     private static ImgObj[] arrows = {Content.images.get(1),Content.images.get(2), Content.images.get(3), Content.images.get(4)};
-    private static int UP = 0;
-    private static int RIGHT = 1;
-    private static int DOWN = 2;
-    private static int LEFT = 3;
+    private static final int UP = 0;
+    private static final int RIGHT = 1;
+    private static final int DOWN = 2;
+    private static final int LEFT = 3;
 
     private int[] directions;
 
