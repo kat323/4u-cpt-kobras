@@ -1,8 +1,10 @@
 package states;
 
-import game.Content;
-import game.Mouse;
+import helpers.Content;
+import helpers.Drawer;
+import helpers.Mouse;
 import game.StateManager;
+import models.ImgObj;
 
 import java.awt.*;
 
@@ -10,9 +12,7 @@ import java.awt.*;
  * the welcome screen of the game
  */
 public class IntroState extends State {
-    private static final int WIDTH = 300;
-    private static final int HEIGHT = 150;
-
+    private ImgObj startBtn = Content.images.get(5);
 
     public IntroState(StateManager sm) {
         super(sm);
@@ -28,9 +28,9 @@ public class IntroState extends State {
     @Override
     public void draw(Graphics2D g) {
 
-        g.drawImage(Content.images.get(1),0 ,0 ,800,800, null );
+        g.drawImage(Content.images.get(0).img,0 ,0 ,800,800, null );
 
-        g.fillRect(300, 300, 300, 150);
+        Drawer.draw(g,startBtn);
 
     }
 
@@ -41,7 +41,7 @@ public class IntroState extends State {
 
     @Override
     public void handleInput() {
-        if(Mouse.isClicked() && Mouse.isCollided(300,300,300,150))
-            sm.setState(sm.LOCATION, 0);
-    }
-}
+        if(Mouse.isClicked() && Mouse.isCollided(startBtn))
+        sm.setState(sm.LOCATION, 0);
+        }
+        }

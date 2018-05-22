@@ -8,12 +8,12 @@ import java.util.ArrayList;
 /**
  * class that stores user information
  */
-public class Player implements Serializable {
-    private int grade;
+public class Player {
+    private static int grade;
     private static int location;
-    private double[] average;
-    private int credits;
-    private ArrayList<Puzzle>[] coursesTaken = new ArrayList[4];
+    private static double[] average;
+    private static int credits;
+    private static ArrayList<Puzzle>[] coursesTaken = new ArrayList[4];
 
     public Player() {
         for(int i = 0; i < 4; i++) {
@@ -25,12 +25,12 @@ public class Player implements Serializable {
         grade = 0;
     }
 
-    public int getGrade() {
+    public static int getGrade() {
         return grade;
     }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
+    public static void setGrade(int in) {
+        grade = in;
     }
 
     public static int getLocation() {
@@ -41,7 +41,7 @@ public class Player implements Serializable {
         location = move;
     }
 
-    public double getAverage(int grade) {
+    public static double getAverage(int grade) {
         setAverage();
         return average[grade];
     }
@@ -49,7 +49,7 @@ public class Player implements Serializable {
     /**
      * sets all the averages
      */
-    public void setAverage() {
+    public static void setAverage() {
         int total = 0;
         int marks = 0;
         try {
@@ -67,11 +67,11 @@ public class Player implements Serializable {
         }
     }
 
-    public int getCredits() {
+    public static int getCredits() {
         return credits;
     }
 
-    public void increaseCredit() {
+    public static void increaseCredit() {
         credits++;
     }
 }

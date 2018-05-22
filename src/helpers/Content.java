@@ -1,8 +1,9 @@
-package game;
+package helpers;
 
 import models.Decision;
 import models.Dialogue;
 import models.Location;
+import models.ImgObj;
 import models.puzzleModels.Puzzle;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -18,7 +19,7 @@ public class Content {
 
     public static HashMap<Integer, Dialogue> dialogues = new HashMap<>();
     public static HashMap<Integer, Puzzle> puzzles = new HashMap<>();
-    public static HashMap<Integer, BufferedImage> images = new HashMap<>();
+    public static HashMap<Integer, ImgObj> images = new HashMap<>();
     public static HashMap<Integer, Location> locations = new HashMap<>();
     public static HashMap<Integer, Decision> decisions = new HashMap<>();
 
@@ -59,14 +60,24 @@ public class Content {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        int i = 1;
+
+        int i = 0;
         while(sc.hasNextLine()) {
             String s = sc.nextLine();
+            Scanner imgSc = new Scanner(s);
             try {
-                images.put(i, ImageIO.read(Content.class.getResource(s)));
+                int id = Integer.parseInt(imgSc.next());
+                int x = Integer.parseInt(imgSc.next());
+                int y = Integer.parseInt(imgSc.next());
+                int width = Integer.parseInt(imgSc.next());
+                int height = Integer.parseInt(imgSc.next());
+                BufferedImage img = ImageIO.read(Content.class.getResource(imgSc.next()));
+
+                images.put(id, new ImgObj(id ,x, y, width, height, img) );
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            imgSc.close();
             i++;
         }
 
@@ -80,5 +91,7 @@ public class Content {
     public static void initDecisions() {
 
     }
+
+
 
 }

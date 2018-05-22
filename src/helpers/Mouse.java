@@ -1,4 +1,6 @@
-package game;
+package helpers;
+
+import models.ImgObj;
 
 /**
  * a class that mainly stores and returns data of mouseclicks
@@ -62,9 +64,9 @@ public class Mouse  {
         Mouse.y = y;
     }
 
-    public static boolean isCollided(int x, int y, int width, int height) {
-        if(Mouse.x <= x + width && Mouse.x>=x) {
-            if(Mouse.y <= y + height && Mouse.y >= y) {
+    public static boolean isCollided(ImgObj obj) {
+        if(Mouse.x <= obj.x + obj.width && Mouse.x>=obj.x) {
+            if(Mouse.y <= obj.y + obj.height && Mouse.y >= obj.y) {
                 return true;
             }
         }

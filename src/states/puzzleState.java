@@ -5,8 +5,10 @@ import game.StateManager;
 import java.awt.*;
 
 public class puzzleState extends State{
+    private int id;
     public puzzleState(StateManager sm, int id) {
         super(sm);
+        this.id = id;
     }
 
     @Override
@@ -16,12 +18,12 @@ public class puzzleState extends State{
 
     @Override
     public void draw(Graphics2D g) {
-
+        // pass draw to the instance of the puzzle
     }
 
     @Override
     public void update() {
-
+        // passes update to the puzzle class
     }
 
     @Override

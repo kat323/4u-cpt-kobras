@@ -1,6 +1,6 @@
 package game;
 
-import javax.swing.*;
+import helpers.Content;
 
 /**
  * A simple graphical school simulation thats really fun
