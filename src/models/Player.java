@@ -1,5 +1,6 @@
 package models;
 
+import helpers.Content;
 import models.puzzleModels.Puzzle;
 
 import java.io.Serializable;
@@ -33,8 +34,8 @@ public class Player {
         grade = in;
     }
 
-    public static int getLocation() {
-        return location;
+    public static Location getLocation() {
+        return Content.locations.get(location);
     }
 
     public static void setLocation(int move) {

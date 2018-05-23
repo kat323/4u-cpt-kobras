@@ -37,4 +37,12 @@ public abstract class Puzzle {
     public int getID() {
         return id;
     }
+
+    public boolean isCompleted() {
+        return isCompleted;
+    }
+
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
+    }
 }

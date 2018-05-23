@@ -4,3 +4,4 @@
 3 0 375 50 50 /images/locationImg/arrowLeft.png
 4 750 375 50 50 /images/locationImg/arrowRight.png
 5 300 250 400 100 /images/startBtn.png
+-1 0 0 0 0 /images/imageTest.png
