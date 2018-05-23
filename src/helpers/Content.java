@@ -1,14 +1,13 @@
 package helpers;
 
-import models.Decision;
-import models.Dialogue;
-import models.Location;
-import models.ImgObj;
+import models.*;
 import models.puzzleModels.Puzzle;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -26,9 +25,9 @@ public class Content {
     public static void init() {
         initImages();
         initPuzzles();
+        initDecisions();
         initDialogues();
         initLocations();
-        initDecisions();
     }
 
 
@@ -46,8 +45,42 @@ public class Content {
         }
     }
 
+    /**
+     * DOES NOT WORK YET
+     */
     public static void initDialogues() {
+        Scanner sc = null;
+        try {
+            sc = new Scanner(new FileReader("resources/gamedat/dialogues.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        sc.useDelimiter("///");
+        while(sc.hasNext()) {
+            Scanner sc2 = new Scanner(sc.nextLine());
+            int id = Integer.parseInt(sc2.next());
+            ImgObj img = Content.images.get(Integer.parseInt(sc2.next()));
+            int decision = -1;
+            if(sc2.hasNext(";;")) {
+                decision = Integer.parseInt(sc2.next());
+            }
+            sc2 = new Scanner(sc.next());
+            List<Speaker> speakers = new ArrayList<>();
+            while(sc2.hasNextLine()) {
+                String name = sc2.nextLine();
+                String text = sc2.nextLine();
+                ImgObj spImg = Content.images.get(Integer.parseInt(sc2.nextLine()));
+                speakers.add(new Speaker(text,spImg , name));
+            }
+            Speaker[] sp = speakers.toArray(new Speaker[speakers.size()]);
+            if(!decisions.containsKey(decision)) {
+                dialogues.put(id, new Dialogue(sp, id, img, decisions.get(decision)));
+            }
+            else {
+                dialogues.put(id, new Dialogue(sp, id, img));
+            }
 
+        }
     }
 
     /**
