@@ -14,7 +14,7 @@ public class DecisionState extends State {
     @Override
     public void init() {
         // get decision from id
-        
+
     }
 
     @Override

@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048aea2d-944e-40ee-99d1-0285c1299e91" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Decision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/states/DecisionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/DecisionState.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -40,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/src/states/DecisionState.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -579,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527088143429</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="updates">
+      <created>1527096841987</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1527096841987</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -619,7 +622,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added more empty classes and abstract classes" />
     <MESSAGE value="added the jframe" />
     <MESSAGE value="done GamePanel and Main" />
     <MESSAGE value="added Mouse and functionality to mouse" />
@@ -644,7 +646,8 @@
     <MESSAGE value="updates here and there" />
     <MESSAGE value="initImage and initLocation are done" />
     <MESSAGE value="initDialogue works" />
-    <option name="LAST_COMMIT_MESSAGE" value="initDialogue works" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1016,7 +1019,7 @@
     <entry file="file://$PROJECT_DIR$/src/states/DecisionState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
