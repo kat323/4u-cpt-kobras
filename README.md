@@ -9,7 +9,9 @@ https://drive.google.com/file/d/1XImkd3lKZEuy_Xqwi0SWBkSPfnRyidDI/view?usp=shari
 
 
 THINGS TO KNOW
-locations.txt format: id roomNorth roomEast roomSouth roomWest bgImgName dialogue1 dialogue2 dialogue3 dialogue4
+puzzle id format (roomNum) * 100 + grade - 9
+
+locations.txt format: id roomNorth roomEast roomSouth roomWest bgimgID dialogue1 d2 d3 d4 d5 d6 d7 d8
 
 imgList.txt format: id xpos ypos width height imgName
 

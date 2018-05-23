@@ -24,9 +24,9 @@ public class Content {
     public static HashMap<Integer, Decision> decisions = new HashMap<>();
 
     public static void init() {
+        initImages();
         initPuzzles();
         initDialogues();
-        initImages();
         initLocations();
         initDecisions();
     }
@@ -61,7 +61,6 @@ public class Content {
             e.printStackTrace();
         }
 
-        int i = 0;
         while(sc.hasNextLine()) {
             String s = sc.nextLine();
             Scanner imgSc = new Scanner(s);
@@ -78,14 +77,41 @@ public class Content {
                 e.printStackTrace();
             }
             imgSc.close();
-            i++;
         }
 
 
     }
 
     public static void initLocations() {
+        Scanner sc = null;
+        try {
+            sc = new Scanner(new FileReader("resources/gamedat/locations.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 
+        while (sc.hasNextLine()) {
+            String s = sc.nextLine();
+            Scanner sc2 = new Scanner(s);
+            try {
+                int id = Integer.parseInt(sc2.next());
+                int[] directions = new int[4];
+                for(int i = 0; i < 4; i++) {
+                    directions[i] = Integer.parseInt(sc2.next());
+                }
+                ImgObj img = Content.images.get(Integer.parseInt(sc2.next()));
+                Dialogue[][] dialogue = new Dialogue[4][2]; // [grade] , [before and after]
+                for(int i = 0; i < 4; i++) {
+                    for(int j = 0; j < 2; j++) {
+                        dialogue[i][j] = Content.dialogues.get(Integer.parseInt(sc2.next()));
+                    }
+                }
+                Content.locations.put(id,new Location(id, directions ,img , dialogue ));
+
+            }catch(Exception e) {
+
+            }
+        }
     }
 
     public static void initDecisions() {

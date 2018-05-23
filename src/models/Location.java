@@ -4,31 +4,44 @@ import helpers.Content;
 
 public class Location {
     private int id;
-    private int[] roomLocations;
+    private int[] roomLocations; // up right down left
     private ImgObj background;
-    private ImgObj[] imgObjects;
+    private Dialogue[][] dialogues; // [year][puzzleDone]
 
-    public Location(int id, int[] roomLocations, int background, ImgObj[] imgObjects) {
+    public Location(int id, int[] roomLocations, ImgObj background, Dialogue[][] dialogues) {
         this.id = id;
         this.roomLocations = roomLocations;
-        this.background = Content.images.get(background);
-        this.imgObjects = imgObjects;
+        this.background = this.getBackground();
+        this.dialogues = dialogues;
 
     }
     public int getId() {
         return id;
     }
 
-    public int[] getRoomLocations() {
-        return roomLocations;
+    public int getDirection(int index) {
+        return roomLocations[index];
     }
 
     public ImgObj getBackground() {
         return background;
     }
 
-    public ImgObj[] getImgObjects() {
-        return imgObjects;
+    public Dialogue getDialogue() {
+        int a = 0;
+        if(isPuzzleDone()) {
+            a++;
+        }
+        return dialogues[Player.getGrade() - 9][a];
+    }
+    public boolean isPuzzleDone() {
+        if(hasPuzzle() && Content.puzzles.get(id *100 + Player.getGrade() - 9).isCompleted()) {
+            return true;
+        }
+        return false;
     }
 
+    public boolean hasPuzzle() {
+        return Content.puzzles.containsKey(Integer.parseInt(id + "" + (Player.getGrade() - 9)));
+    }
 }
