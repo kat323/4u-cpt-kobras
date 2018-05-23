@@ -125,22 +125,24 @@ public class Content {
             String s = sc.nextLine();
             Scanner sc2 = new Scanner(s);
             try {
-                int id = Integer.parseInt(sc2.next());
+                int id = sc2.nextInt();
                 int[] directions = new int[4];
                 for(int i = 0; i < 4; i++) {
-                    directions[i] = Integer.parseInt(sc2.next());
+                    directions[i] = sc2.nextInt();
                 }
-                ImgObj img = Content.images.get(Integer.parseInt(sc2.next()));
+                ImgObj img = Content.images.get(sc2.nextInt());
                 Dialogue[][] dialogue = new Dialogue[4][2]; // [grade] , [before and after]
                 for(int i = 0; i < 4; i++) {
                     for(int j = 0; j < 2; j++) {
-                        dialogue[i][j] = Content.dialogues.get(Integer.parseInt(sc2.next()));
+                        int a = sc2.nextInt();
+                        dialogue[i][j] = Content.dialogues.get(a);
                     }
                 }
-                Content.locations.put(id,new Location(id, directions ,img , dialogue ));
+                Location i = new Location(id, directions ,img , dialogue );
+                Content.locations.put(id,i);
 
             }catch(Exception e) {
-
+                e.printStackTrace();
             }
         }
     }

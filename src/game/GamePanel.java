@@ -1,6 +1,7 @@
 package game;
 
 import helpers.Mouse;
+import models.Player;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,6 +17,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     public static final int WIDTH = 800;
     public static final int HEIGHT = 800;
     private StateManager sm;
+    public static Player p;
 
     private BufferedImage image;
     private Graphics2D g;
@@ -52,7 +54,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         g = (Graphics2D) image.getGraphics();
 
         sm = new StateManager();
-
+        p = new Player();
         running = true;
         thread = new Thread(this);
         thread.start();

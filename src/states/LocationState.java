@@ -6,11 +6,12 @@ import helpers.Drawer;
 import helpers.Mouse;
 import models.ImgObj;
 import models.Location;
-import models.Player;
 
 import java.awt.*;
+import java.util.Timer;
 
 import static game.StateManager.DIALOGUE;
+
 
 /**
  * displays the current room as well as possible directions
@@ -18,8 +19,8 @@ import static game.StateManager.DIALOGUE;
  */
 public class LocationState extends State {
 
-    private static ImgObj[] arrows = {Content.images.get(1),Content.images.get(2), Content.images.get(3), Content.images.get(4)};
-    private static Location location;
+    private static ImgObj[] arrows = {Content.images.get(101),Content.images.get(102), Content.images.get(103), Content.images.get(104)};
+    private static Location location = Content.locations.get(0);
 
 
     public LocationState(StateManager sm) {
@@ -35,6 +36,7 @@ public class LocationState extends State {
     public void draw(Graphics2D g) {
 
         // draw background
+        Drawer.draw(g,location.getBackground());
         for(ImgObj a: arrows) {
             Drawer.draw(g,a);
         }
@@ -45,32 +47,34 @@ public class LocationState extends State {
 
     @Override
     public void update() {
-        location = Player.getLocation();
+        //location = Player.getLocation();
         handleInput();
     }
 
     @Override
     public void handleInput() {
-
         // if mouse clicked arrow button
+
         if(Mouse.isClicked()) {
             for (int i = 0; i < 4; i++) {
                 if(Mouse.isCollided(arrows[i])) {
                     int move = location.getDirection(i);
                     if(move != -1) {
-                        Player.setLocation(move);
+
+                        location = Content.locations.get(move);
+                        Mouse.setClickState(false);
                     }
                 }
             }
-
-            // if mouse collides with entity spot start dialogue
-        //    if(location.getDialogue().getID() != -1) {
-        //        if(Mouse.isCollided(location.getDialogue().getObj())) {
-        //            sm.setState(DIALOGUE, location.getDialogue().getID());
-        //        }
-        //    }
+/*
+             //if mouse collides with entity spot start dialogue
+            if(location.getDialogue().getID() != -1) {
+                if(Mouse.isCollided(location.getDialogue().getObj())) {
+                    sm.setState(DIALOGUE, location.getDialogue().getID());
+                }
+            }
+            */
         }
-
 
     }
 }

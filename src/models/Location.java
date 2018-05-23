@@ -11,7 +11,7 @@ public class Location {
     public Location(int id, int[] roomLocations, ImgObj background, Dialogue[][] dialogues) {
         this.id = id;
         this.roomLocations = roomLocations;
-        this.background = this.getBackground();
+        this.background = background;
         this.dialogues = dialogues;
 
     }
