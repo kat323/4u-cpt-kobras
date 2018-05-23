@@ -45,9 +45,7 @@ public class Content {
         }
     }
 
-    /**
-     * DOES NOT WORK YET
-     */
+
     public static void initDialogues() {
         Scanner sc = null;
         try {

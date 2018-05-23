@@ -5,7 +5,7 @@ import game.StateManager;
 import java.awt.*;
 
 public class DecisionState extends State {
-
+    String[] choices = new String[2];
 
     public DecisionState(StateManager sm, int id) {
         super(sm);
@@ -14,6 +14,7 @@ public class DecisionState extends State {
     @Override
     public void init() {
         // get decision from id
+        
     }
 
     @Override

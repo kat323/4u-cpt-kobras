@@ -16,6 +16,10 @@ name
 text here
 imgObj
 ///
+id imgObj decision;;
+name
+text here
+imgObj
 -------------------------
 puzzle id format (roomNum) * 100 + grade - 9
 
