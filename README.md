@@ -9,6 +9,18 @@ https://drive.google.com/file/d/1XImkd3lKZEuy_Xqwi0SWBkSPfnRyidDI/view?usp=shari
 
 
 THINGS TO KNOW
+other note speakers are made of name text and imgObj and can be repeated
+Dialogue text format  **note decisions and // can be omitted if there are no decisions speakers are in the middle
+id imgObj decision;;
+name
+text here
+imgObj
+///
+id imgObj decision;;
+name
+text here
+imgObj
+-------------------------
 puzzle id format (roomNum) * 100 + grade - 9
 
 locations.txt format: id roomNorth roomEast roomSouth roomWest bgimgID dialogue1 d2 d3 d4 d5 d6 d7 d8

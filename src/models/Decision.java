@@ -25,16 +25,8 @@ public class Decision {
         return choices;
     }
 
-    public void setChoices(String[] choices) {
-        this.choices = choices;
-    }
-
     public int[] getEffects() {
         return effects;
-    }
-
-    public void setEffects(int[] effects) {
-        this.effects = effects;
     }
 
     public int[] getDialogue() {
@@ -47,10 +39,6 @@ public class Decision {
 
     public int getPuzzle() {
         return puzzle;
-    }
-
-    public void setPuzzle(int puzzle) {
-        this.puzzle = puzzle;
     }
 
     public Decision(int id, String[] choices, int[] effects, int[] dialogues, int puzzle ) {

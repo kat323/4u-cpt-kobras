@@ -33,11 +33,14 @@ public class LocationState extends State {
 
     @Override
     public void draw(Graphics2D g) {
+
         // draw background
         for(ImgObj a: arrows) {
             Drawer.draw(g,a);
         }
-        // draw room object at specified objxy
+
+        // draw room object
+        Drawer.draw(g, location.getDialogue().getObj());
     }
 
     @Override
@@ -59,14 +62,15 @@ public class LocationState extends State {
                     }
                 }
             }
-            if(location.getDialogue().getObj().id != -1) {
+
+            // if mouse collides with entity spot start dialogue
+            if(location.getDialogue().getID() != -1) {
                 if(Mouse.isCollided(location.getDialogue().getObj())) {
                     sm.setState(DIALOGUE, location.getDialogue().getID());
                 }
             }
         }
 
-        // if mouse collides with entity spot start dialogue
 
     }
 }
