@@ -18,6 +18,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     public static final int HEIGHT = 1000;
     private StateManager sm;
     public static Player p;
+    public static TxtArea txtArea;
 
     private BufferedImage image;
     private Graphics2D g;
@@ -48,9 +49,14 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         requestFocus();
         addMouseListener(this);
         addMouseMotionListener(this);
+        txtArea = new TxtArea();
+        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS ));
+        this.add(Box.createRigidArea(new Dimension(800,800 )));
+        this.add(txtArea);
+        txtArea.setBounds(0,765 ,800 ,200 );
 
 
-        image = new BufferedImage(WIDTH, HEIGHT, 1);
+        image = new BufferedImage(WIDTH, HEIGHT -235, 1);
         g = (Graphics2D) image.getGraphics();
 
         sm = new StateManager();
@@ -93,9 +99,14 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         System.out.println(Mouse.getX() + " " + Mouse.getY());
         sm.update();
         draw();
+
         drawToScreen();
+        txtArea.paint(g);
+        String s = "wedfewfddfv"; // Dialogue.get String
+        txtArea.setMessage(s);
         Mouse.update();
     }
+
 
     /**
      * calls the statemanager to draw using the given Graphics2D
@@ -110,8 +121,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
      */
     private void drawToScreen() {
         Graphics g2 = getGraphics();
-        g2.drawImage(image, 0, 0, WIDTH , HEIGHT , null);
-
+        g2.drawImage(image, 0, 0, WIDTH , HEIGHT - 235, null);
         g2.dispose();
     }
 
@@ -138,7 +148,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     public void mouseExited(MouseEvent e) {
 
     }
-
     @Override
     public void mouseDragged(MouseEvent e) {
         Mouse.setX(e.getX());
@@ -153,3 +162,20 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
     }
 }
 
+class TxtArea extends JTextArea {
+    public TxtArea() {
+        setLocation(0,800 );
+        setSize(800, 200);
+        setVisible(true);
+        setBackground(Color.GRAY);
+        setText("Hello game");
+    }
+
+    public void setMessage(String s) {
+        setText(s);
+    }
+
+
+
+
+}
