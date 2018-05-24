@@ -10,6 +10,7 @@ public class Mouse  {
     private static int x;
     private static int y;
     private static boolean clickState;
+    private static boolean prevClickState;
     private static boolean isDragged;
 
     /**
@@ -17,7 +18,9 @@ public class Mouse  {
      * @return whether mouse has been clicked
      */
     public static boolean isClicked() {
-        return clickState;
+        if(clickState && !prevClickState)
+            return true;
+        return false;
     }
 
     /**
@@ -72,6 +75,14 @@ public class Mouse  {
         }
         return false;
     }
+    public static boolean isCollided(int x, int y, int width, int height){
+        if(Mouse.x <= x + width && Mouse.x>=x) {
+            if(Mouse.y <= y + height && Mouse.y >= y) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public static boolean isDragged() {
         return isDragged;
@@ -80,4 +91,9 @@ public class Mouse  {
     public static void setDragged(boolean isDragged) {
         Mouse.isDragged = isDragged;
     }
+
+    public static void update() {
+        prevClickState = clickState;
+    }
+
 }

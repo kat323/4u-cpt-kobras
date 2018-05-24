@@ -14,7 +14,7 @@ Dialogue text format  **note decisions and // can be omitted if there are no dec
 id imgObj decision;;
 name
 text here
-imgObj
+imgObj of speaker
 ///
 id imgObj decision;;
 name

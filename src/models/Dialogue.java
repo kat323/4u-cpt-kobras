@@ -21,8 +21,12 @@ public class Dialogue {
         this.decision = decision;
     }
 
-    public Speaker[] startConvo() {
+    public Speaker[] getSpeakers() {
         return speakers;
+    }
+
+    public Decision getDecision() {
+        return decision;
     }
 
     public boolean hasDecision() {

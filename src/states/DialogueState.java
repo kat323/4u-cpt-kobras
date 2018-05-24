@@ -1,13 +1,17 @@
 package states;
 
 import game.StateManager;
+import helpers.Content;
+import helpers.Mouse;
 import models.Speaker;
 
 import java.awt.*;
 
 public class DialogueState extends State {
     private int id;
-    private Speaker[] speakers;
+    Speaker[] speakers;
+    private int index;
+    public static String s= "";
 
     public DialogueState(StateManager sm, int id) {
         super(sm);
@@ -16,21 +20,31 @@ public class DialogueState extends State {
 
     @Override
     public void init() {
-        // set speakers = to Content.getDialogue(id).getSpeakers()
     }
 
     @Override
     public void draw(Graphics2D g) {
-
+        // draw background
+        // draw the text
+        // draw the name
+        // draw the character
     }
 
     @Override
     public void update() {
-
+        handleInput();
+        // set text
     }
 
     @Override
     public void handleInput() {
-
+        // if mouse clicked
+        if(Mouse.isClicked()) {
+            
+        }
+        // then switch over to next speaker
+        // if no more speakers, then if decision
+        // switch to setState(decision, decision id)
+        // else set state to Location
     }
 }
