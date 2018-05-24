@@ -42,7 +42,7 @@ public class LocationState extends State {
         }
 
         // draw room object
-        Drawer.draw(g, location.getDialogue().getObj());
+        //Drawer.draw(g, location.getDialogue().getObj());
     }
 
     @Override
@@ -61,7 +61,7 @@ public class LocationState extends State {
                     if(move != -1) {
 
                         location = Content.locations.get(move);
-                        Mouse.setClickState(false);
+                        // Mouse.setClickState(false);
                     }
                 }
             }
@@ -70,7 +70,7 @@ public class LocationState extends State {
             if(location.getDialogue().getID() != -1) {
                 if(Mouse.isCollided(location.getDialogue().getObj())) {
                     sm.setState(DIALOGUE, location.getDialogue().getID());
-                    Mouse.setClickState(false);
+                    // Mouse.setClickState(false);
                 }
             }
 

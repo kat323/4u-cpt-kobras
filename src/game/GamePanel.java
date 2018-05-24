@@ -15,7 +15,7 @@ import java.awt.image.BufferedImage;
  */
 public class GamePanel extends JPanel implements Runnable, MouseListener, MouseMotionListener {
     public static final int WIDTH = 800;
-    public static final int HEIGHT = 1200;
+    public static final int HEIGHT = 1000;
     private StateManager sm;
     public static Player p;
 
@@ -94,6 +94,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         sm.update();
         draw();
         drawToScreen();
+        Mouse.update();
     }
 
     /**
