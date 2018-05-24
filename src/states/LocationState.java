@@ -42,12 +42,11 @@ public class LocationState extends State {
         }
 
         // draw room object
-        // Drawer.draw(g, location.getDialogue().getObj());
+        Drawer.draw(g, location.getDialogue().getObj());
     }
 
     @Override
     public void update() {
-        //location = Player.getLocation();
         handleInput();
     }
 
@@ -66,14 +65,15 @@ public class LocationState extends State {
                     }
                 }
             }
-/*
+
              //if mouse collides with entity spot start dialogue
             if(location.getDialogue().getID() != -1) {
                 if(Mouse.isCollided(location.getDialogue().getObj())) {
                     sm.setState(DIALOGUE, location.getDialogue().getID());
+                    Mouse.setClickState(false);
                 }
             }
-            */
+
         }
 
     }

@@ -17,6 +17,7 @@ public class Mouse  {
      * @return whether mouse has been clicked
      */
     public static boolean isClicked() {
+
         return clickState;
     }
 
@@ -67,6 +68,14 @@ public class Mouse  {
     public static boolean isCollided(ImgObj obj) {
         if(Mouse.x <= obj.x + obj.width && Mouse.x>=obj.x) {
             if(Mouse.y <= obj.y + obj.height && Mouse.y >= obj.y) {
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean isCollided(int x, int y, int width, int height){
+        if(Mouse.x <= x + width && Mouse.x>=x) {
+            if(Mouse.y <= y + height && Mouse.y >= y) {
                 return true;
             }
         }

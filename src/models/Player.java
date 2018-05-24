@@ -13,8 +13,10 @@ public class Player {
     private static int grade;
     private static int location;
     private static double[] average;
+    private static double bonusAverage;
     private static int credits;
     private static ArrayList<Puzzle>[] coursesTaken = new ArrayList[4];
+    private static int socialSkill;
 
     public Player() {
         for(int i = 0; i < 4; i++) {
@@ -23,7 +25,7 @@ public class Player {
         credits = 0;
         average = new double[4];
         location = 0;
-        grade = 0;
+        grade = 9;
     }
 
     public static int getGrade() {
@@ -31,7 +33,10 @@ public class Player {
     }
 
     public static void setGrade(int in) {
-        grade = in;
+        grade += in;
+        if(grade >= 13) {
+            grade = 9;
+        }
     }
 
     public static Location getLocation() {
@@ -44,7 +49,7 @@ public class Player {
 
     public static double getAverage(int grade) {
         setAverage();
-        return average[grade];
+        return average[grade] + bonusAverage;
     }
 
     /**
@@ -74,5 +79,17 @@ public class Player {
 
     public static void increaseCredit() {
         credits++;
+    }
+
+    public static void setBonusAverage(double bonusAverage) {
+        Player.bonusAverage += bonusAverage;
+    }
+
+    public static int getSocialSkill() {
+        return socialSkill;
+    }
+
+    public static void setSocialSkill(int socialSkill) {
+        Player.socialSkill += socialSkill;
     }
 }

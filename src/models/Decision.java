@@ -13,6 +13,15 @@ public class Decision {
     private int[] dialogue;
     private int puzzle;
 
+
+    public Decision(int id, String[] choices, int[] effects, int[] dialogues, int puzzle ) {
+        this.id = id;
+        this.choices = choices;
+        this.dialogue = dialogues;
+        this.puzzle = puzzle;
+        this.effects = effects;
+    }
+
     public int getId() {
         return id;
     }
@@ -25,12 +34,12 @@ public class Decision {
         return choices;
     }
 
-    public int[] getEffects() {
-        return effects;
+    public int getEffects(int i) {
+        return effects[i];
     }
 
-    public int[] getDialogue() {
-        return dialogue;
+    public int getDialogue(int index) {
+        return dialogue[index];
     }
 
     public void setDialogue(int[] dialogue) {
@@ -39,14 +48,6 @@ public class Decision {
 
     public int getPuzzle() {
         return puzzle;
-    }
-
-    public Decision(int id, String[] choices, int[] effects, int[] dialogues, int puzzle ) {
-        this.id = id;
-        this.choices = choices;
-        this.dialogue = dialogues;
-        this.puzzle = puzzle;
-        this.effects = effects;
     }
 
     public int choose(int index) {
