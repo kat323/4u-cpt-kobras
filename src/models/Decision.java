@@ -7,28 +7,19 @@ public class Decision {
     public static final int MARK = 4;
     public static final int SOCIAL = 5;
 
-    private int id;
     private String[] choices;
     private int[] effects;
     private int[] dialogue;
     private int puzzle;
 
 
-    public Decision(int id, String[] choices, int[] effects, int[] dialogues, int puzzle ) {
-        this.id = id;
+    public Decision(String[] choices, int[] effects, int[] dialogues, int puzzle ) {
         this.choices = choices;
         this.dialogue = dialogues;
         this.puzzle = puzzle;
         this.effects = effects;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String[] getChoices() {
         return choices;

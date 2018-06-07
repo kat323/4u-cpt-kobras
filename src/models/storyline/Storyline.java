@@ -1,13 +1,22 @@
 package models.storyline;
 
-public class Storyline {
-  Quest[] quest;
-    int currQuest;
+import models.Dialogue;
 
-    public void nextQuest() {};
-    public void startQuest() {};
-    public void storyFinished() {};
-    public void gradCondition() {};
-    public void increaseLevel() {};
-    public void failGame() {};
+public class Storyline {
+    public static Dialogue[] quests;
+    public static int currQuest;
+
+    public static void nextQuest() {
+        // current quest++
+    }
+    public static void startQuest() {
+        // set current quest to 0
+
+    }
+    public static void storyFinished() {
+        // output Thanks for playing dialogue
+    }
+    public static void gradCondition() {}
+    public static void increaseLevel() {}
+
 }

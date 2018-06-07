@@ -1,7 +1,5 @@
 package models;
 
-import helpers.Content;
-
 public class Speaker {
     public String text;
     public String name;

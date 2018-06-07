@@ -24,6 +24,7 @@ public class puzzleState extends State{
     @Override
     public void update() {
         // passes update to the puzzle class
+        // check if puzzle is completed then change state to location
     }
 
     @Override
