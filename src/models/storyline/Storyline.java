@@ -6,17 +6,26 @@ public class Storyline {
     public static Dialogue[] quests;
     public static int currQuest;
 
-    public static void nextQuest() {
-        // current quest++
+    public static boolean nextQuest() {
+        // if currQuest puzzle is completed (dialogue.decision.puzzle.isCompleted();
+        // then increaseLevel();
+        // if currQuest >= quests
+        // then storyFinished and return false;
+        return true;
     }
     public static void startQuest() {
         // set current quest to 0
 
     }
     public static void storyFinished() {
-        // output Thanks for playing dialogue
+        // output Thanks for playing JDialogue
+        // set quests currQuests to 0
+        // new Player();
     }
-    public static void gradCondition() {}
-    public static void increaseLevel() {}
+    public static void increaseLevel() {
+        // currQuest++();
+        // if done a certain num of quests then increase grade
+        //
+    }
 
 }

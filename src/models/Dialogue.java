@@ -1,7 +1,5 @@
 package models;
 
-import helpers.Content;
-
 public class Dialogue {
     private ImgObj obj;
     private int id;

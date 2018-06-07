@@ -11,7 +11,7 @@ public class DialogueState extends State {
     private int id;
     Speaker[] speakers;
     private int index;
-    public static String s = "";
+    public static String texts = "";
 
     public DialogueState(StateManager sm, int id) {
         super(sm);
@@ -33,7 +33,7 @@ public class DialogueState extends State {
     @Override
     public void update() {
         handleInput();
-        // set text
+        // set texts
     }
 
     @Override

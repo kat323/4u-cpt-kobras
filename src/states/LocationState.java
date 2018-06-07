@@ -8,8 +8,6 @@ import models.ImgObj;
 import models.Location;
 
 import java.awt.*;
-import java.util.Timer;
-
 import static game.StateManager.DIALOGUE;
 
 
@@ -29,7 +27,7 @@ public class LocationState extends State {
 
     @Override
     public void init() {
-
+        // if quest puzzle is completed set next quest
     }
 
     @Override
@@ -42,6 +40,7 @@ public class LocationState extends State {
         }
 
         // draw room object
+        // if there is a quest then draw quest object instead
         //Drawer.draw(g, location.getDialogue().getObj());
     }
 
