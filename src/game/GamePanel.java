@@ -10,6 +10,9 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.awt.image.BufferedImage;
 
+import static java.awt.Font.PLAIN;
+import static java.awt.Font.SANS_SERIF;
+
 /**
  * this is the main frame which contains the game loop and the component that all the other classes draw on
  */
@@ -54,7 +57,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         this.add(Box.createRigidArea(new Dimension(800,800 )));
         this.add(txtArea);
         txtArea.setBounds(0,765 ,800 ,200 );
-
 
         image = new BufferedImage(WIDTH, HEIGHT -235, 1);
         g = (Graphics2D) image.getGraphics();
@@ -102,7 +104,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
 
         drawToScreen();
         txtArea.paint(g);
-        String s = "wedfewfddfv"; // Dialogue.get String
+        String s = "Welcme"; // Dialogue.get String
         txtArea.setMessage(s);
         Mouse.update();
     }
@@ -168,7 +170,7 @@ class TxtArea extends JTextArea {
         setSize(800, 200);
         setVisible(true);
         setBackground(Color.GRAY);
-        setText("Hello game");
+        setFont(new Font(SANS_SERIF,PLAIN ,30));
     }
 
     public void setMessage(String s) {

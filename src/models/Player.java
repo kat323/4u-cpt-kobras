@@ -10,13 +10,13 @@ import java.util.ArrayList;
  * class that stores user information
  */
 public class Player {
-    private static int grade;
-    private static int location;
-    private static double[] average;
-    private static double bonusAverage;
-    private static int credits;
-    private static ArrayList<Puzzle>[] coursesTaken = new ArrayList[4];
-    private static int socialSkill;
+    public static int grade;
+    public static int location;
+    public static double[] average;
+    public static double bonusAverage;
+    public static int credits;
+    public static ArrayList<Puzzle>[] coursesTaken = new ArrayList[4];
+    public static int socialSkill;
 
     public Player() {
         for(int i = 0; i < 4; i++) {
@@ -73,9 +73,6 @@ public class Player {
         }
     }
 
-    public static int getCredits() {
-        return credits;
-    }
 
     public static void increaseCredit() {
         credits++;
@@ -85,11 +82,4 @@ public class Player {
         Player.bonusAverage += bonusAverage;
     }
 
-    public static int getSocialSkill() {
-        return socialSkill;
-    }
-
-    public static void setSocialSkill(int socialSkill) {
-        Player.socialSkill += socialSkill;
-    }
 }
