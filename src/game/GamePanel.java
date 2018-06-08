@@ -18,8 +18,8 @@ import static java.awt.Font.SANS_SERIF;
  * this is the main frame which contains the game loop and the component that all the other classes draw on
  */
 public class GamePanel extends JPanel implements Runnable, MouseListener, MouseMotionListener {
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 1000;
+    public static final int WIDTH = 600;
+    public static final int HEIGHT = 800;
     private StateManager sm;
     public static Player p;
     public static TxtArea txtArea;
@@ -55,9 +55,8 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         addMouseMotionListener(this);
         txtArea = new TxtArea();
         this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS ));
-        this.add(Box.createRigidArea(new Dimension(800,800 )));
+        this.add(Box.createRigidArea(new Dimension(600,600 )));
         this.add(txtArea);
-        txtArea.setBounds(0,765 ,800 ,200 );
 
         image = new BufferedImage(WIDTH, HEIGHT -235, 1);
         g = (Graphics2D) image.getGraphics();
@@ -104,8 +103,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         draw();
 
         drawToScreen();
-        //txtArea.paint(g);
-        TextOutput.s = "Welcme";
         txtArea.setMessage(TextOutput.s);
         Mouse.update();
     }
@@ -167,8 +164,8 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
 
 class TxtArea extends JTextArea {
     public TxtArea() {
-        setLocation(0,800 );
-        setSize(800, 200);
+        setLocation(0,600 );
+        setSize(600, 200);
         setVisible(true);
         setBackground(Color.WHITE);
         setFont(new Font(SANS_SERIF,PLAIN ,27));

@@ -1,7 +1,9 @@
 package models.storyline;
 
+import java.util.ArrayList;
+
 public class Storyline {
-    public static Quest[] quests;
+    public static ArrayList<Quest> quests;
     public static int currQuest;
 
     public static boolean nextQuest() {

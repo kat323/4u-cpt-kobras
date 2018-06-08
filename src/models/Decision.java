@@ -1,5 +1,7 @@
 package models;
 
+import models.puzzleModels.Puzzle;
+
 public class Decision {
     public static final int PUZZLE = 1;
     public static final int DIALOGUE = 2;
@@ -7,44 +9,20 @@ public class Decision {
     public static final int MARK = 4;
     public static final int SOCIAL = 5;
 
-    private String[] choices;
-    private int[] effects;
-    private int[] dialogue;
-    private int puzzle;
+    public String[] choices;
+    public int[] effects;
+    public int[] dialogue;
+    public Puzzle puzzle;
+    public Dialogue[] dialogues;
 
 
-    public Decision(String[] choices, int[] effects, int[] dialogues, int puzzle ) {
+    public Decision(String[] choices, int[] effects, int[] dialogue, Puzzle puzzle ) {
         this.choices = choices;
-        this.dialogue = dialogues;
+        this.dialogue = dialogue;
         this.puzzle = puzzle;
         this.effects = effects;
+        dialogues = new Dialogue[2];
     }
-
-
-    public String[] getChoices() {
-        return choices;
-    }
-
-    public int getEffects(int i) {
-        return effects[i];
-    }
-
-    public int getDialogue(int index) {
-        return dialogue[index];
-    }
-
-    public void setDialogue(int[] dialogue) {
-        this.dialogue = dialogue;
-    }
-
-    public int getPuzzle() {
-        return puzzle;
-    }
-
-    public int choose(int index) {
-        return effects[index];
-    }
-
 
 
 }
