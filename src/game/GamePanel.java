@@ -1,6 +1,7 @@
 package game;
 
 import helpers.Mouse;
+import helpers.TextOutput;
 import models.Player;
 
 import javax.swing.*;
@@ -103,9 +104,9 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         draw();
 
         drawToScreen();
-        txtArea.paint(g);
-        String s = "Welcme"; // Dialogue.get String
-        txtArea.setMessage(s);
+        //txtArea.paint(g);
+        TextOutput.s = "Welcme";
+        txtArea.setMessage(TextOutput.s);
         Mouse.update();
     }
 
@@ -169,8 +170,8 @@ class TxtArea extends JTextArea {
         setLocation(0,800 );
         setSize(800, 200);
         setVisible(true);
-        setBackground(Color.GRAY);
-        setFont(new Font(SANS_SERIF,PLAIN ,30));
+        setBackground(Color.WHITE);
+        setFont(new Font(SANS_SERIF,PLAIN ,27));
     }
 
     public void setMessage(String s) {

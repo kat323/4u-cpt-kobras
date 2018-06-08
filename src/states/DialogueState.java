@@ -3,19 +3,21 @@ package states;
 import game.StateManager;
 import helpers.Content;
 import helpers.Mouse;
+import models.Dialogue;
 import models.Speaker;
 
 import java.awt.*;
 
 public class DialogueState extends State {
-    private int id;
     Speaker[] speakers;
     private int index;
-    public static String texts = "";
+    private Dialogue dialogue;
 
     public DialogueState(StateManager sm, int id) {
         super(sm);
-        this.id = id;
+        dialogue = Content.dialogues.get(id);
+        speakers = dialogue.getSpeakers();
+        index = 0;
     }
 
     @Override
@@ -25,15 +27,14 @@ public class DialogueState extends State {
     @Override
     public void draw(Graphics2D g) {
         // draw background
-        // draw the text
-        // draw the name
         // draw the character
     }
 
     @Override
     public void update() {
         handleInput();
-        // set texts
+        // set texts TextOutput.s = ;
+        //
     }
 
     @Override

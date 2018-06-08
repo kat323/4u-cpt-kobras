@@ -52,11 +52,6 @@ public class DecisionState extends State {
             // sm.setState(StateManager.DIALOGUE, decision.getDialogue(choice)
             if(effect == PUZZLE)
                 sm.setState(StateManager.PUZZLE, decision.getPuzzle())
-            if mark
-                Player.setBonusAverage(1)
-
-            if social
-                setSocialSkill(3)
 
             if grade
                 Player.grade(

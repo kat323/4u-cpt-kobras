@@ -6,6 +6,7 @@ import helpers.Drawer;
 import helpers.Mouse;
 import models.ImgObj;
 import models.Location;
+import models.storyline.Storyline;
 
 import java.awt.*;
 import static game.StateManager.DIALOGUE;
@@ -38,8 +39,9 @@ public class LocationState extends State {
         for(ImgObj a: arrows) {
             Drawer.draw(g,a);
         }
-
+        // Drawer.draw(g, location.getDialogue().obj);
         // draw room object
+        //if(Storyline.)
         // if there is a quest then draw quest object instead
         //Drawer.draw(g, location.getDialogue().getObj());
     }
