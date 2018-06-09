@@ -3,11 +3,7 @@ package models;
 import models.puzzleModels.Puzzle;
 
 public class Decision {
-    public static final int PUZZLE = 1;
-    public static final int DIALOGUE = 2;
-    public static final int GRADE = 3;
-    public static final int MARK = 4;
-    public static final int SOCIAL = 5;
+
 
     public String[] choices;
     public int[] effects;

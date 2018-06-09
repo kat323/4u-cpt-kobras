@@ -58,7 +58,7 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
         this.add(Box.createRigidArea(new Dimension(600,600 )));
         this.add(txtArea);
 
-        image = new BufferedImage(WIDTH, HEIGHT -235, 1);
+        image = new BufferedImage(WIDTH, HEIGHT -200, 1);
         g = (Graphics2D) image.getGraphics();
 
         sm = new StateManager();
