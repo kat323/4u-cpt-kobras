@@ -196,7 +196,7 @@ public class Content {
             int eff1 = sc2.nextInt();
             int eff2 = sc2.nextInt();
             int puzzle = sc2.nextInt();
-            Content.decisions.put(id,new Decision(new String[] {choice1, choice2}, new int[] {eff1, eff2}, new int[] {dio1, dio2},Content.puzzles.get(puzzle)));
+            Content.decisions.put(id,new Decision(id,new String[] {choice1, choice2}, new int[] {eff1, eff2}, new int[] {dio1, dio2},Content.puzzles.get(puzzle)));
         }
     }
 

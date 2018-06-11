@@ -7,7 +7,7 @@ public class Storyline {
     public static int currQuest;
 
     public static boolean nextQuest() {
-        // if currQuest puzzle is completed (quest.dialogue.decision.puzzle.isCompleted();
+        // if currQuest puzzle is completed (quest.dialogue.decision.puzzle.isCompleted())
         // then increaseLevel();
         // if currQuest >= quests
         // then storyFinished and return false;

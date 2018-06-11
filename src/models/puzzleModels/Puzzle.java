@@ -3,6 +3,7 @@ package models.puzzleModels;
 import java.awt.Graphics2D;
 
 public abstract class Puzzle {
+    public int id;
     private boolean isCompleted;
 
     public abstract void draw(Graphics2D g);
